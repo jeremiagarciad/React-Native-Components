@@ -14,9 +14,10 @@ export const ThemeContext = createContext({} as ThemeContextProps);
 
 export const ThemeProvider = ({children}: any) => {
 
-    // const colorScheme  = useColorScheme()
+    // const colorScheme  = useColorScheme()-s
 
     const [theme, dispatch] = useReducer(themeReducer, (Appearance.getColorScheme() === "dark") ? darkTheme : lightTheme)
+
 
 
     useEffect(() => {
